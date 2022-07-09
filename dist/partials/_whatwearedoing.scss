@@ -1,0 +1,176 @@
+
+@mixin mobile-sm {
+    @media screen and (min-width: 320px) and (max-width:425px)  {
+        @content;
+    }
+}
+
+@mixin border($color){
+    border: 2px solid $color;
+}
+
+@mixin mobile-tab {
+    @media screen and (min-width: 500px) and (max-width:768px)  {
+        @content;
+    }
+}
+
+
+.content-main-section{
+    margin: auto 2em 2em 2em;
+    @include mobile-sm{
+        margin: auto 1em 2em 1em;
+    }
+    
+
+    .hero-block{
+        padding: .5em 1em;
+        border-top: 2px solid #5F6E7C;
+        border-bottom: 2px solid #5F6E7C;
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile-sm(){
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        .left-section{
+
+            .top{
+                margin: 3px 0;
+                h2{
+                    color: #6558F5;
+                    font-weight: 600;
+
+                    @include mobile-sm(){
+                        font-size: 1em;
+                    }
+                }
+                h5{
+                    color: #3a3438;
+                }
+            }
+            .mid-info{
+                margin: 3px 0;
+                h3{
+                    font-weight: bold;
+                    color: #3a3438;
+                }
+                h5{
+                    color: #5F6E7C;
+                }
+            }
+            .course-info{
+                color: #6558F5;
+                h4{
+                    font-size: .8em;
+                }
+            }
+            .offers{
+                color: #3a3438;
+            }
+            h6{
+                color: #5F6E7C;
+            }
+        }
+        .right-section{
+
+            @include mobile-sm(){
+                padding: .6em 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button{
+                background-color: #6558F5 ;
+                padding: .7em 1.5em;
+                color: white;
+                border: none;
+                list-style: none;
+                cursor: pointer;
+                border-radius: 2px;
+
+                @include mobile-sm(){
+                    justify-content: flex-start;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    .campus-info-section{
+        margin-top: .5em;
+        margin-left: 1em;
+
+        @include mobile-sm(){
+            margin-left: 0em;
+        }
+        h3{
+            color: #3a3438;
+            font-weight: 600;
+            @include mobile-sm(){
+                font-size: 1em;
+            }
+        }
+        p{
+            line-height: 1.6;
+            margin: 5px 0;
+            @include mobile-sm(){
+                text-align: center;
+            }
+        }
+
+        .right-section{
+            margin: .5em 0;
+            @include mobile-sm(){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            button{
+                background-color: #6558F5 ;
+                padding: .7em 1.5em;
+                color: white;
+                border: none;
+                list-style: none;
+                cursor: pointer;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .register-section{
+        margin-top: 1em;
+        margin-left: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 3px solid #5F6E7C;
+        border-bottom: 3px solid #5F6E7C;
+        padding: .7em 0;
+        @include mobile-sm(){
+            margin-left: 0;
+            margin-bottom: 4em;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        p{
+            color: #6558F5;
+            font-weight: 600;
+        }
+
+        button{
+            background-color: #6558F5 ;
+            padding: .7em 1.5em;
+            color: white;
+            border: none;
+            list-style: none;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+    }
+    
+    
+}

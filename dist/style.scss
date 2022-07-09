@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import '../dist/partials/home';
+@import '../dist/partials/whoweare';
+@import '../dist/partials/whatwedo';
+@import '../dist/partials/whatwearedoing';
+@mixin border($color){
+    border: 2px solid $color;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+

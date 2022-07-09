@@ -1,0 +1,193 @@
+
+@mixin mobile-sm {
+    @media screen and (min-width: 320px) and (max-width:425px)  {
+        @content;
+    }
+}
+
+@mixin border($color){
+    border: 2px solid $color;
+}
+
+@mixin mobile-tab {
+    @media screen and (min-width: 500px) and (max-width:768px)  {
+        @content;
+    }
+}
+
+.container{
+    height: 100vh;
+    @include mobile-sm{
+        height: 100%;
+    }
+    @include mobile-tab{
+        height: 100%;
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5em 2.5em;
+        @include mobile-sm{
+            margin: 2em 0;
+        }
+        @include mobile-tab{
+            margin: 1em 0;
+        }
+
+        .logo{
+
+            @include mobile-sm{
+                display: none;
+            }
+            @include mobile-tab{
+                display: none;
+            }
+        }
+
+        .menu-bar{
+            display: none;
+            border: 2px solid#5F6E7C;
+            text-transform: uppercase;
+
+            @include mobile-sm{
+                display: block;
+                padding: .2em .7em;
+                margin-left: -2em;
+                position: absolute;
+                left: 2.3em;
+                top: 2em;
+            }
+            @include mobile-tab{
+                display: block;
+                padding: .5em 1.5em;
+                margin-left: -1em;
+            }
+        }
+
+        nav{
+            display: flex;
+            align-items: center;
+            ul{
+                display: flex;
+                align-items: center;
+
+                @include mobile-sm{
+                    display: none;
+                }
+                @include mobile-tab{
+                    display: none;
+                }
+
+                li{
+                    padding: .7em 1em;
+                    margin: 0 1em;
+                    list-style: none;
+                    border: 1px solid #5F6E7C;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    a{
+                        color: #5F6E7C;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .register{
+                background-color: #6558F5 ;
+                padding: .7em 1em;
+                list-style: none;
+                cursor: pointer;
+                border-radius: 2px;
+
+                @include mobile-sm{
+                    position: absolute;
+                    right: 1em;
+                    top: 2em;
+                    padding: .3em .7em;
+
+                }
+                @include mobile-tab{
+                    margin-right: 1em;
+                }
+                a{
+                    color: #fff ;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+   
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 85vh;
+
+        @include mobile-sm{
+            height: 60vh;
+            margin: 5em 1em 2em 1em;
+        }
+        @include mobile-tab{
+            height: 60vh;
+            margin-top: 10em;
+            padding: auto 1em;
+        }
+
+        .inner-home-content{
+            
+            h4{
+                color: #5F6E7C;
+                font-weight: bold;
+                margin: 2px 0;
+            }
+            h2{
+                color:#6558F5;
+                font-size: 2.3em;
+                font-weight: 600;
+                margin-bottom: .4em;
+
+                @include mobile-sm{
+                    line-height: 1.5;
+                    font-size: 1.5em;
+                    font-weight: 600;
+                }
+            }
+
+            ul{
+                margin: auto 1em 1em 1em;
+
+                li{
+                    font-size: 1.5em;
+                    list-style: none;
+                    margin: 2px 0;
+                    padding: 1em 0;
+                    cursor: pointer;
+                    color: #5F6E7C;
+                    font-weight: 600;
+
+                    @include mobile-sm{
+                        font-size: 1.2em;
+                        padding: .5em 0;
+                    }
+                    @include mobile-tab{
+                       
+                    }
+
+                    &:hover{
+                        color: #6558F5;
+                        border: 3px dashed #6558F5;
+                        padding-left: 1em;
+                        font-weight: bold;
+                    }
+                }
+            }
+            h5{
+                color: #5F6E7C;
+                font-weight: 600;
+            }
+        }
+    }
+}
