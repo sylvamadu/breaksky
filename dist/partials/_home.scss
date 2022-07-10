@@ -51,12 +51,19 @@
             border: 2px solid#5F6E7C;
             text-transform: uppercase;
 
+            p{
+                color: #6558F5;
+                font-weight: 600;
+                .fa-bars{
+                    color: #6558F5;
+                }
+            }
+
             @include mobile-sm{
                 display: block;
                 padding: .2em .7em;
-                margin-left: -2em;
                 position: absolute;
-                left: 2.3em;
+                left: 1em;
                 top: 2em;
             }
             @include mobile-tab{
@@ -64,6 +71,8 @@
                 padding: .5em 1.5em;
                 margin-left: -1em;
             }
+
+            
         }
 
         nav{
@@ -191,3 +200,120 @@
         }
     }
 }
+
+.mobile-menu{
+    padding-left: 2em;
+    padding-top: 2em;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+
+    .menu-bar-close{
+        margin: 1em 0;
+     
+
+        .fa-times{
+            font-size: 1.5em;
+            color: #6558F5;
+        }
+    }
+
+    nav{
+        margin: 2em 0 2em 0;
+
+        ul{
+
+            li{
+                list-style: none;
+                padding: .3em 0;
+
+                .active{
+                    color: #6558F5;
+                }
+
+
+                a{
+                    text-decoration: none;
+                    border-bottom: 2px solid #5F6E7C;
+                    color: #5F6E7C;
+
+                    &:hover{
+                        border-bottom: 2px solid #6558F5;
+                        color: #6558F5;
+                    }
+                }
+            }
+        }
+    }
+    .icons{
+        margin: .5em 0;
+        p{
+            color: #5F6E7C;
+            font-weight: 600;
+
+            span{
+                color: #6558F5;
+                margin-right: .5em;
+            }
+        }
+    }
+
+    .address{
+
+        p{
+          
+            color: #5F6E7C;
+            font-weight: 600;
+
+            span{
+                color: #6558F5;
+                margin-right: .5em;
+            }
+        }
+
+    }
+
+    .social-icons{
+        margin: 1em 0;
+        display: flex;
+        align-items: center;
+
+        p{
+            color: #5F6E7C;
+            font-weight: 600;
+
+            span{
+                margin-right: .5em;
+
+                .fa-twitter{
+                    color: #2C88D9;
+                }
+
+                .fa-youtube{
+                    color: #D3455B;
+                    margin-left: .8em;
+                }
+            }
+        }
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2.5em 0;
+    }
+}
+
+.open{
+    visibility: visible;
+    transition: all .5s ease-in-out;
+    transform: translateX(0%);
+    
+}
+

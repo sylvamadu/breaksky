@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/dist/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="logo">Breaksky Tech</div>
-            <div class="menu-bar">
-                <p>menu</p>
+            <div class="menu-bar" id="menu-open">
+                <p>menu <i class="fa fa-bars"></i></p>
             </div>
             <nav>
                 <ul>
@@ -39,6 +40,33 @@
             </div>
         </main>
     </div>
-    
+    <div class="mobile-menu" id="menu-close">
+        <div class="menu-bar-close">
+            <i class="fa fa-times"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/whoweare.html">Who We Are</a></li>
+                <li><a href="/whatwedo.html">What We Do</a></li>
+                <li><a href="/whatwearedoing.html">What We Are Doing</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <p><span><i class="fa fa-paper-plane"></i></span>breakskytech@gmail.com</p>
+            <p><span><i class="fa fa-phone"></i></span>+234 (01 812-319-9783)</p>
+            <p><span><i class="fa fa-phone"></i></span>+234 (01 803-847-0020)</p>
+        </div>
+        <div class="address">
+            <p><span><i class="fa fa-map-marker"></i></span>No 7, Agboyi Road, <br> Alapere..<br> Lagos</p>
+        </div>
+        <div class="social-icons">
+            <p><span><i class="fa fa-twitter"></i></span>@Breaksky Tech</p>
+            <p><span><i class="fa fa-youtube"></i></span>Breaksky Tech</p>
+        </div>
+        <div class="logo">Logo space</div>
+    </div>
+
+    <script src="/app.js"></script>
 </body>
 </html>

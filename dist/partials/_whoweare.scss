@@ -127,12 +127,19 @@
             border: 2px solid#5F6E7C;
             text-transform: uppercase;
 
+            p{
+                color: #6558F5;
+                font-weight: 600;
+                .fa-bars{
+                    color: #6558F5;
+                }
+            }
+
             @include mobile-sm{
                 display: block;
                 padding: .2em .7em;
-                margin-left: -2em;
                 position: absolute;
-                left: 2.3em;
+                left: 1em;
                 top: 2em;
             }
             @include mobile-tab{
@@ -258,14 +265,14 @@
                 img{
                     width: 550px;
                     height: 150px;
-                    border: 3px dashed #6558F5;
 
                     @include mobile-sm(){
                         width: 100%;
                         margin: 1em 0;
+                        height: 200px;
                     }
                     @include mobile-tab(){
-    
+                        height: 200px;
                     }
                 }
             }
@@ -287,13 +294,14 @@
                 img{
                     width: 500px;
                     height: 200px;
-                    border: 3px dashed #6558F5;
 
                     @include mobile-sm(){
                         width: 100%;
                         margin: 1em 0;
+                        height: 200px;
                     }
                     @include mobile-tab(){
+                        height: 200px;
                         width: 100%;
                         margin: 1em 0;
                     }
